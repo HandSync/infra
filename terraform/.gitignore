@@ -1,0 +1,18 @@
+# Arquivos de estado do Terraform
+*.tfstate
+*.tfstate.backup
+
+# Diretório oculto do Terraform
+.terraform/
+
+# Arquivos de variáveis sensíveis
+*.tfvars
+
+# Chaves privadas
+*.pem
+
+# Logs e arquivos temporários
+*.log
+*.tmp
+
+*.exe
