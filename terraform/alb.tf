@@ -1,6 +1,6 @@
 # Load Balancer (ALB)
 resource "aws_lb" "alb_front" {
-  name               = "handsync-alb-front"
+  name               = "handsync-alb-front-v2"
   load_balancer_type = "application"
   subnets            = [aws_subnet.subrede_publica_1a.id, aws_subnet.subrede_publica_1b.id]
   security_groups    = [aws_security_group.sg_publica.id]
@@ -18,7 +18,7 @@ resource "aws_lb_listener" "http" {
 }
 
 resource "aws_lb_target_group" "front_tg" {
-  name     = "handsync-front-tg"
+  name     = "handsync-front-tg-v2"
   port     = 80
   protocol = "HTTP"
   vpc_id   = aws_vpc.vpc_handsync.id
